@@ -22,10 +22,13 @@ README
 SIGNATURE
 t/Toolforge-MixNMatch-Print-Catalog/01-use.t
 t/Toolforge-MixNMatch-Print-Catalog/02-version.t
+t/Toolforge-MixNMatch-Print-Catalog/03-print.t
 t/Toolforge-MixNMatch-Print-User/01-use.t
 t/Toolforge-MixNMatch-Print-User/02-version.t
+t/Toolforge-MixNMatch-Print-User/03-print.t
 t/Toolforge-MixNMatch-Print-YearMonth/01-use.t
 t/Toolforge-MixNMatch-Print-YearMonth/02-version.t
+t/Toolforge-MixNMatch-Print-YearMonth/03-print.t
 t/Toolforge-MixNMatch-Print/01-use.t
 t/Toolforge-MixNMatch-Print/02-version.t
 xt/Toolforge-MixNMatch-Object/01-pod_coverage.t
