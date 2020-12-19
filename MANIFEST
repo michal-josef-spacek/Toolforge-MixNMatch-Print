@@ -19,6 +19,7 @@ Print/Catalog.pm
 Print/User.pm
 Print/YearMonth.pm
 README
+SIGNATURE
 t/Toolforge-MixNMatch-Print-Catalog/01-use.t
 t/Toolforge-MixNMatch-Print-Catalog/02-version.t
 t/Toolforge-MixNMatch-Print-User/01-use.t
