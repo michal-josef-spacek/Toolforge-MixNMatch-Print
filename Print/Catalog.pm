@@ -25,9 +25,11 @@ sub print {
 		$opts_hr->{'type'} ? 'Type: '.$obj->type : (),
 		$opts_hr->{'count'} ? 'Count: '.$obj->count : (),
 	);
-	my $i = Indent->new;
+
+	my $i;
 
 	if ($opts_hr->{'year_months'} && @{$obj->year_months}) {
+		$i //= Indent->new;
 		push @print, 'Year/months:';
 		$i->add;
 		foreach my $year_month (sort { $a->year <=> $b->year || $a->month <=> $b->month }
@@ -39,6 +41,7 @@ sub print {
 	}
 
 	if ($opts_hr->{'users'} && @{$obj->users}) {
+		$i //= Indent->new;
 		push @print, 'Users:';
 		$i->add;
 		foreach my $user (reverse sort { $a->count <=> $b->count } @{$obj->users}) {
