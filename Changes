@@ -1,4 +1,6 @@
 0.02
+ - Improve printing of Catalog to way, that no printing of users and
+   month/year if doesnt' exist.
 
 0.01 2020-12-19T11:10:18+01:00
  - First version.

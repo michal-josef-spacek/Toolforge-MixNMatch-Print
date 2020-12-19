@@ -27,7 +27,7 @@ sub print {
 	);
 	my $i = Indent->new;
 
-	if ($opts_hr->{'year_months'}) {
+	if ($opts_hr->{'year_months'} && @{$obj->year_months}) {
 		push @print, 'Year/months:';
 		$i->add;
 		foreach my $year_month (sort { $a->year <=> $b->year || $a->month <=> $b->month }
@@ -38,7 +38,7 @@ sub print {
 		$i->remove;
 	}
 
-	if ($opts_hr->{'users'}) {
+	if ($opts_hr->{'users'} && @{$obj->users}) {
 		push @print, 'Users:';
 		$i->add;
 		foreach my $user (reverse sort { $a->count <=> $b->count } @{$obj->users}) {
