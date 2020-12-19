@@ -1,5 +1,5 @@
 ---
-abstract: "Toolforge Mix'n'match tool print."
+abstract: "Toolforge Mix'n'match tool object print routines."
 author:
   - 'Michal Josef Spacek <skim@cpan.org>'
 build_requires:
