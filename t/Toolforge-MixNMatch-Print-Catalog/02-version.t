@@ -6,4 +6,4 @@ use Test::NoWarnings;
 use Toolforge::MixNMatch::Print::Catalog;
 
 # Test.
-is($Toolforge::MixNMatch::Print::Catalog::VERSION, 0.01, 'Version.');
+is($Toolforge::MixNMatch::Print::Catalog::VERSION, 0.02, 'Version.');
