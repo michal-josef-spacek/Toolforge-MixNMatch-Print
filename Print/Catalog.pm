@@ -3,6 +3,7 @@ package Toolforge::MixNMatch::Print::Catalog;
 use strict;
 use warnings;
 
+use Error::Pure qw(err);
 use Indent;
 use Toolforge::MixNMatch::Print::User;
 use Toolforge::MixNMatch::Print::YearMonth;
@@ -11,6 +12,13 @@ our $VERSION = 0.03;
 
 sub print {
 	my ($obj, $opts_hr) = @_;
+
+	if (! defined $obj) {
+		err "Object doesn't exist.";
+	}
+	if (! $obj->isa('Toolforge::MixNMatch::Object::Catalog')) {
+		err "Object isn't 'Toolforge::MixNMatch::Object::Catalog'.";
+	}
 
 	if (! defined $opts_hr) {
 		$opts_hr = {

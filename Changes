@@ -1,4 +1,5 @@
 0.03
+ - Add check for objects to print.
  - Remove TODOs from Print doc.
 
 0.02 2020-12-19T11:38:38+01:00

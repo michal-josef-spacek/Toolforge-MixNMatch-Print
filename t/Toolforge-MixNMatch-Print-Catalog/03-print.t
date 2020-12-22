@@ -1,7 +1,9 @@
 use strict;
 use warnings;
 
-use Test::More 'tests' => 5;
+use English;
+use Error::Pure::Utils qw(clean);
+use Test::More 'tests' => 7;
 use Test::NoWarnings;
 use Toolforge::MixNMatch::Object::Catalog;
 use Toolforge::MixNMatch::Object::User;
@@ -119,3 +121,18 @@ Users:
 END
 chomp $right_ret;
 is($ret, $right_ret, 'Print catalog with user and year/month stats.');
+
+# Test.
+eval {
+	Toolforge::MixNMatch::Print::Catalog::print();
+};
+is($EVAL_ERROR, "Object doesn't exist.\n", "Object doesn't exist.");
+clean();
+
+# Test.
+eval {
+	Toolforge::MixNMatch::Print::Catalog::print('bad');
+};
+is($EVAL_ERROR, "Object isn't 'Toolforge::MixNMatch::Object::Catalog'.\n",
+	"Object isn't 'Toolforge::MixNMatch::Object::Catalog'.");
+clean();

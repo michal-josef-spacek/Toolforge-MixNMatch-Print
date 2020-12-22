@@ -18,10 +18,13 @@ name 'Toolforge-MixNMatch-Print';
 perl_version 5.006002;
 readme_from 'Print.pm';
 recursive_author_tests('xt');
+requires 'Error::Pure' => 0;
 requires 'Indent' => 0;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Toolforge-MixNMatch-Print/issues',
 resources 'homepage' => 'https://github.com/michal-josef-spacek/Toolforge-MixNMatch-Print';
 resources 'repository' => 'git://github.com/michal-josef-spacek/Toolforge-MixNMatch-Print';
+test_requires 'English' => 0;
+test_requires 'Error::Pure::Utils' => 0;
 test_requires 'Test::More' => 0;
 test_requires 'Test::NoWarnings' => 0;
 test_requires 'Toolforge::MixNMatch::Object' => 0;
