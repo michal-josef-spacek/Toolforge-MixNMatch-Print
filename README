@@ -8,13 +8,13 @@ DESCRIPTION
 
 SEE ALSO
     Toolforge::MixNMatch::Print::Catalog
-        TODO
+        Mix'n'match user structure print.
 
     Toolforge::MixNMatch::Print::User
-        TODO
+        Mix'n'match user structure print.
 
     Toolforge::MixNMatch::Print::YearMonth
-        TODO
+        Mix'n'match year/month structure print.
 
 REPOSITORY
     <https://github.com/michal-josef-spacek/Toolforge-MixNMatch-Print>

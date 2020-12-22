@@ -28,15 +28,15 @@ This distributions is set of print routins for objects from Toolforge Mix'n'matc
 
 =item L<Toolforge::MixNMatch::Print::Catalog>
 
-TODO
+Mix'n'match user structure print.
 
 =item L<Toolforge::MixNMatch::Print::User>
 
-TODO
+Mix'n'match user structure print.
 
 =item L<Toolforge::MixNMatch::Print::YearMonth>
 
-TODO
+Mix'n'match year/month structure print.
 
 =back
 
