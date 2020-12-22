@@ -64,3 +64,123 @@ sub print {
 1;
 
 __END__
+
+=pod
+
+=encoding utf8
+
+=head1 NAME
+
+Toolforge::MixNMatch::Print::Catalog - Mix'n'match catalog structure print.
+
+=head1 SYNOPSIS
+
+ use Toolforge::MixNMatch::Print::Catalog qw(print);
+
+ my $print = print($obj);
+
+=head1 SUBROUTINES
+
+=head2 C<print>
+
+ my $print = print($obj);
+
+Print Toolforge::MixNMatch::Object::Catalog instance to user output.
+
+Returns string.
+
+=head1 ERRORS
+
+ obj2struct():
+         Object doesn't exist.
+         Object isn't 'Toolforge::MixNMatch::Object::Catalog'.
+
+=head1 EXAMPLE
+
+ use strict;
+ use warnings;
+
+ use Data::Printer;
+ use Toolforge::MixNMatch::Object::Catalog;
+ use Toolforge::MixNMatch::Object::User;
+ use Toolforge::MixNMatch::Object::YearMonth;
+ use Toolforge::MixNMatch::Print::Catalog;
+
+ # Object.
+ my $obj = Toolforge::MixNMatch::Object::Catalog->new(
+         'count' => 10,
+         'type' => 'Q5',
+         'users' => [
+                 Toolforge::MixNMatch::Object::User->new(
+                         'count' => 6,
+                         'uid' => 1,
+                         'username' => 'Skim',
+                 ),
+                 Toolforge::MixNMatch::Object::User->new(
+                         'count' => 4,
+                         'uid' => 2,
+                         'username' => 'Foo',
+                 ),
+         ],
+         'year_months' => [
+                 Toolforge::MixNMatch::Object::YearMonth->new(
+                         'count' => 2,
+                         'month' => 9,
+                         'year' => 2020,
+                 ),
+                 Toolforge::MixNMatch::Object::YearMonth->new(
+                         'count' => 8,
+                         'month' => 10,
+                         'year' => 2020,
+                 ),
+         ],
+ );
+
+ # Print.
+ print Toolforge::MixNMatch::Print::Catalog::print($obj)."\n";
+
+ # Output:
+ # Type: Q5
+ # Count: 10
+ # Year/months:
+ #         2020/9: 2
+ #         2020/10: 8
+ # Users:
+ #         Skim (1): 6
+ #         Foo (2): 4
+
+=head1 DEPENDENCIES
+
+L<Error::Pure>.
+
+=head1 SEE ALSO
+
+=over
+
+=item L<Toolforge::MixNMatch::Print>
+
+Toolforge Mix'n'match tool object print routines.
+
+=back
+
+=head1 REPOSITORY
+
+L<https://github.com/michal-josef-spacek/Toolforge-MixNMatch-Print>
+
+=head1 AUTHOR
+
+Michal Josef Špaček L<mailto:skim@cpan.org>
+
+L<http://skim.cz>
+
+=head1 LICENSE AND COPYRIGHT
+
+© Michal Josef Špaček 2020
+
+BSD 2-Clause License
+
+=head1 VERSION
+
+0.05
+
+=cut
