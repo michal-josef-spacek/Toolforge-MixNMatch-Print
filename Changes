@@ -1,4 +1,4 @@
-0.04
+0.04 2020-12-23T08:36:24+01:00
  - Add minimal dependency to perl 5.10.1.
  - Add tests for Catalog.
 
